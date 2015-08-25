@@ -43,8 +43,8 @@ function WebSocketTest() {
             ws.onmessage = function(evt) {
                 var received_msg = evt.data;
                 var dispStr = evt.data + " (length: " + evt.data.length + ")";
-                if (evt.data.length > 50) {
-                    dispStr = evt.data.substring(0, 50) + "... (length: " + evt.data.length + ")";
+                if (evt.data.length > 70) {
+                    dispStr = evt.data.substring(0, 70) + "... (length: " + evt.data.length + ")";
                 }
                 log("Message received on: " + (new Date()).toString() + " " + dispStr);
             };

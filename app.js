@@ -41,8 +41,9 @@ var regexp = /(\d+)/i;
 var buffer = [];
 var minSize = 256;
 var maxSize = 32 * 1024 * 1024;
-for (var i = 0 ; i < maxSize; i++) {
-    buffer.push('a');
+var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+for (var i = 0; i < maxSize; i++) {
+    buffer.push(possible.charAt(Math.floor(Math.random() * possible.length)));
 }
 buffer = buffer.join("");
 
@@ -51,7 +52,7 @@ wss.on('connection', function connection(ws) {
         console.log('received: %s', message);
         var found = message.match(regexp);
         // create a random string between 256 to 32M bytes
-        var targetSize = Math.floor(Math.random()* (maxSize - minSize)) + minSize;
+        var targetSize = Math.floor(Math.random() * (maxSize - minSize)) + minSize;
         ws.send("for: " + found[0] + " sent on: " + (new Date()).toString() + " " + buffer.substring(0, targetSize));
     });
     ws.send('server ack connection');
