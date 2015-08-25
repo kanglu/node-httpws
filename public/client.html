@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="js/jquery-2.1.4.js"></script>
+      <script src="js/client.js"></script>
+      <meta charset="utf-8">
+      <title>WebSocket Client Test</title>
+   </head>
+   <body>
+      <div id="sse">
+         <form id="entry">
+            <label>Number of requests:</label>
+            <input name="num" id="num" type="text" value="1"><br><br>
+            <label>Target WS URL:</label>
+            <input name="url" id="url" type="text" value="wss://localhost:8443"><br><br>
+         </form>
+         <a href="javascript:WebSocketTest()">Start Simulation</a>
+         <br>
+      </div>
+      <div class="output"></div>
+   </body>
+</html>
