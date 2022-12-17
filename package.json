@@ -1,0 +1,24 @@
+{
+  "name": "httpws",
+  "version": "1.0.0",
+  "description": "A sample http and web socket server using express with optional secure certificates setup.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanglu/node-httpws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanglu/node-httpws/issues"
+  },
+  "homepage": "https://github.com/kanglu/node-httpws#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "ws": "^8.11.0"
+  }
+}
